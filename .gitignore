@@ -457,3 +457,14 @@ FodyWeavers.xsd
 /tests/Ambev.DeveloperEvaluation.Unit/obj/Ambev.DeveloperEvaluation.Unit.csproj.nuget.g.props
 /tests/Ambev.DeveloperEvaluation.Unit/obj/project.assets.json
 /tests/Ambev.DeveloperEvaluation.Unit/obj/project.nuget.cache
+/tests/Ambev.DeveloperEvaluation.Unit/obj/Debug/net8.0/Ambev.DeveloperEvaluation.Unit.csproj.FileListAbsolute.txt
+/tests/Ambev.DeveloperEvaluation.Integration/obj/Debug/net8.0/Ambev.DeveloperEvaluation.Integration.csproj.FileListAbsolute.txt
+/tests/Ambev.DeveloperEvaluation.Functional/obj/Debug/net8.0/Ambev.DeveloperEvaluation.Functional.csproj.FileListAbsolute.txt
+/src/Ambev.DeveloperEvaluation.WebApi/obj/Debug/net8.0/Ambev.DeveloperEvaluation.WebApi.csproj.FileListAbsolute.txt
+/src/Ambev.DeveloperEvaluation.WebApi/obj/Debug/net8.0/apphost.exe
+/src/Ambev.DeveloperEvaluation.Application/obj/Debug/net8.0/Ambev.DeveloperEvaluation.Application.csproj.FileListAbsolute.txt
+/src/Ambev.DeveloperEvaluation.Common/obj/Debug/net8.0/Ambev.DeveloperEvaluation.Common.csproj.FileListAbsolute.txt
+/src/Ambev.DeveloperEvaluation.Domain/obj/Debug/net8.0/Ambev.DeveloperEvaluation.Domain.csproj.FileListAbsolute.txt
+/src/Ambev.DeveloperEvaluation.IoC/obj/Debug/net8.0/Ambev.DeveloperEvaluation.IoC.csproj.FileListAbsolute.txt
+/src/Ambev.DeveloperEvaluation.ORM/obj/Debug/net8.0/Ambev.DeveloperEvaluation.ORM.csproj.FileListAbsolute.txt
+/obj/Debug/docker-compose.dcproj.FileListAbsolute.txt
