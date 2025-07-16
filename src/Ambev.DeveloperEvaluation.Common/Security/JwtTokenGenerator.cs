@@ -1,3 +1,4 @@
+using Ambev.DeveloperEvaluation.Common.Security.Entities;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
