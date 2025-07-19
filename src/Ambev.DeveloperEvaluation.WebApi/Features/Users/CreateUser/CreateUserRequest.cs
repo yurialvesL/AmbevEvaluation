@@ -1,5 +1,5 @@
-﻿using Ambev.DeveloperEvaluation.Domain.Enums;
-
+﻿using Ambev.DeveloperEvaluation.Domain.Entities;
+using Ambev.DeveloperEvaluation.Domain.Enums;
 namespace Ambev.DeveloperEvaluation.WebApi.Features.Users.CreateUser;
 
 /// <summary>
@@ -16,6 +16,16 @@ public class CreateUserRequest
     /// Gets or sets the password. Must meet security requirements.
     /// </summary>
     public string Password { get; set; } = string.Empty;
+
+    /// <summary>
+    /// Gets or sets the user's name details.
+    /// </summary>
+    public required Name Name { get; set; }
+
+    /// <summary>
+    /// Gets or sets the user's address details.
+    /// </summary>
+    public required Adress Address { get; set; }
 
     /// <summary>
     /// Gets or sets the phone number in format (XX) XXXXX-XXXX.

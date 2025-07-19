@@ -15,17 +15,13 @@ public sealed class AuthenticateUserProfile : Profile
     public AuthenticateUserProfile()
     {
         CreateMap<User, AuthenticateUserResponse>()
-            .ForMember(dest => dest.Token, opt => opt.Ignore())
-            .ForMember(dest => dest.Role, opt => opt.MapFrom(src => src.Role.ToString()));
+            .ForMember(dest => dest.Token, opt => opt.Ignore());
 
         CreateMap<AuthenticateUserRequest, AuthenticateUserCommand>()
             .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email))
             .ForMember(dest => dest.Password, opt => opt.MapFrom(src => src.Password));
 
         CreateMap<AuthenticateUserResult, AuthenticateUserResponse>()
-            .ForMember(dest => dest.Token, opt => opt.MapFrom(src => src.Token))
-            .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email))
-            .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
-            .ForMember(dest => dest.Role, opt => opt.MapFrom(src => src.Role));
+            .ForMember(dest => dest.Token, opt => opt.MapFrom(src => src.Token));
     }
 }
