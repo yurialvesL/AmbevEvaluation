@@ -1,15 +1,16 @@
-using Ambev.DeveloperEvaluation.Application;
+﻿using Ambev.DeveloperEvaluation.Application;
 using Ambev.DeveloperEvaluation.Common.HealthChecks;
 using Ambev.DeveloperEvaluation.Common.Logging;
 using Ambev.DeveloperEvaluation.Common.Security;
 using Ambev.DeveloperEvaluation.Common.Validation;
 using Ambev.DeveloperEvaluation.IoC;
 using Ambev.DeveloperEvaluation.ORM;
-using Ambev.DeveloperEvaluation.WebApi.Middleware;
 using Ambev.DeveloperEvaluation.WebApi.Common;
+using Ambev.DeveloperEvaluation.WebApi.Middleware;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Ambev.DeveloperEvaluation.WebApi;
 
@@ -70,6 +71,18 @@ public class Program
             app.UseBasicHealthChecks();
 
             app.MapControllers();
+            Console.WriteLine("🔥 INICIANDO APLICAÇÃO DOCKERIZADA COM SUCESSO!");
+
+            app.Lifetime.ApplicationStarted.Register(() =>
+            {
+                Log.Information("✅ Aplicação ASP.NET iniciou com sucesso.");
+            });
+
+            app.Lifetime.ApplicationStopped.Register(() =>
+            {
+                Log.Warning("🛑 Aplicação ASP.NET foi encerrada.");
+            });
+            Console.WriteLine("Iniciando run");
 
             app.Run();
         }

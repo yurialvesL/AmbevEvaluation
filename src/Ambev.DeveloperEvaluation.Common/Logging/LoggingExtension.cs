@@ -62,7 +62,9 @@ public static class LoggingExtension
                 .Enrich.WithProperty("Application", builder.Environment.ApplicationName)
                 .Enrich.FromLogContext()
                 .Enrich.WithExceptionDetails(_destructuringOptionsBuilder)
+                .WriteTo.Console()
                 .Filter.ByExcluding(_filterPredicate);
+
 
             if (Debugger.IsAttached)
             {
