@@ -39,6 +39,17 @@ public class User : BaseEntity, IUser
     public string Password { get; set; } = string.Empty;
 
     /// <summary>
+    /// Gets the NameUser object containing the user's name and last name.
+    /// </summary>
+    public Name Name { get; set; }
+
+
+    /// <summary>
+    /// Gets the GeolocationUser object containing the user's geolocation information.
+    /// </summary>
+    public Adress Address { get; set; }
+
+    /// <summary>
     /// Gets the user's role in the system.
     /// Determines the user's permissions and access levels.
     /// </summary>

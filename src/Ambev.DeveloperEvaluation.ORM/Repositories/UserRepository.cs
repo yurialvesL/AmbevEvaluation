@@ -57,6 +57,21 @@ public class UserRepository : IUserRepository
     }
 
     /// <summary>
+    /// Retrieves a paginated list of users
+    /// </summary>
+    /// <param name="page"></param>
+    /// <param name="size"></param>
+    /// <param name="cancellationToken"></param>
+    /// <returns></returns>
+    public async Task<List<User>?> ListUsers(int page, int size, CancellationToken cancellationToken = default)
+    {
+        return await _context.Users
+            .Skip((page - 1) * size)
+            .Take(size)
+            .ToListAsync(cancellationToken) ?? null;
+    }
+
+    /// <summary>
     /// Deletes a user from the database
     /// </summary>
     /// <param name="id">The unique identifier of the user to delete</param>

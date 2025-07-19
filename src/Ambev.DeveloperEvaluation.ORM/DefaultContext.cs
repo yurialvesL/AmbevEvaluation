@@ -17,6 +17,18 @@ public class DefaultContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
+
+        modelBuilder.Entity<User>(entity =>
+        {
+            entity.OwnsOne(u => u.Name);
+            entity.OwnsOne(u => u.Address, a =>
+            {
+                a.OwnsOne(g => g.Geolocation);
+            });
+        });
+
+
         base.OnModelCreating(modelBuilder);
     }
 }

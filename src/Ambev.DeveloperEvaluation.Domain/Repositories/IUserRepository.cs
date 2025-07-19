@@ -31,6 +31,16 @@ public interface IUserRepository
     /// <returns>The user if found, null otherwise</returns>
     Task<User?> GetByEmailAsync(string email, CancellationToken cancellationToken = default);
 
+
+    /// <summary>
+    /// Retrieves a paginated list of users
+    /// </summary>
+    /// <param name="page">page number for pagination</param>
+    /// <param name="size">Number of itens per pageparam>
+    /// <param name="cancellationToken">Cancellation token</param>
+    /// <returns></returns>
+    Task<List<User>?> ListUsers(int page, int size, CancellationToken cancellationToken = default);
+
     /// <summary>
     /// Deletes a user from the repository
     /// </summary>
